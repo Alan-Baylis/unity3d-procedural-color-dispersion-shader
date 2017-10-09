@@ -33,8 +33,6 @@ public class oil_bubble : MonoBehaviour {
 	void cal_dispersion(){
 		Material m = mat_ar_stream_dispersed;
 
-		m.SetTexture ("tex_src", tex_dispersion_src);
-		m.SetTexture ("tex_dst", tex_dispersion_dst);
 		m.SetTexture ("tex_scene", tex_scene);
 		m.SetTexture ("tex_noise", tex_noise);
 		m.SetInt ("is_init", is_init);

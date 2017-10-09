@@ -17,8 +17,6 @@
 			
 			#include "UnityCG.cginc"
 
-			sampler2D tex_src;
-			sampler2D tex_dst;
 			sampler2D tex_cam_stream;
 			sampler2D tex_noise;
 			float4 _MainTex_ST;
@@ -58,23 +56,21 @@
 			float4 frag (v2f_img i) : SV_Target
 			{
 				float2 uv = i.uv;
-				float texel = 1./512.;
-				float2 advt_dir = tex2D(tex_noise, frac(uv + _SinTime)).rg * 25.0f;
-//				float2 advt_dir_b = tex2D(tex_src, frac(uv + _SinTime)).rg * 65.0f;
+				float texel = 1./1024.;
+				float2 advt_dir = tex2D(tex_noise, frac(uv - _Time * .1)).rg * 290.0f;
 
 				float3 cam = advect(tex_cam_stream, uv, advt_dir, texel).rgb;
 				float3 noise = advect(tex_noise, uv, advt_dir, texel).grb;
-				float3 col = advect(tex_src, uv, advt_dir, texel).rgb;
 
-				float3 c = normalize(col + cam + noise);
+				float3 c = normalize(cam + noise);
 
 				if(is_init == 0) 
 					c = cam;
 
 				c = clamp(c, float3(0, 0, 0), float3(1.0f, 1.0f, 1.0f));
-				c = pow(c, 3.5);
+				c = pow(c, 10.);
 
-				return float4(c,1);
+				return float4(c.rbg,1);
 			}
 			ENDCG
 		}

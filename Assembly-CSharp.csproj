@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\attraction.cs" />
      <Compile Include="Assets\Scripts\instantiater.cs" />
      <Compile Include="Assets\Scripts\oil_bubble.cs" />
+     <Compile Include="Assets\Scripts\rotate_self.cs" />
      <None Include="Assets\Shaders\shdr_dispersion.shader" />
      <None Include="Assets\Shaders\shdr_oil_bubble.shader" />
  <Reference Include="UnityEngine.UI">

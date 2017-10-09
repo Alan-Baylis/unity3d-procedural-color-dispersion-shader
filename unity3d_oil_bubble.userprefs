@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/shdr_dispersion.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/shdr_oil_bubble.shader">
     <Files>
-      <File FileName="Assets/Scripts/instantiater.cs" Line="20" Column="38" />
-      <File FileName="Assets/Scripts/oil_bubble.cs" Line="30" Column="34" />
-      <File FileName="Assets/Shaders/shdr_oil_bubble.shader" Line="27" Column="23" />
-      <File FileName="Assets/Shaders/shdr_dispersion.shader" Line="66" Column="61" />
+      <File FileName="Assets/Scripts/oil_bubble.cs" Line="24" Column="39" />
+      <File FileName="Assets/Shaders/shdr_dispersion.shader" Line="60" Column="69" />
+      <File FileName="Assets/Scripts/instantiater.cs" Line="1" Column="1" />
+      <File FileName="Assets/Shaders/shdr_oil_bubble.shader" Line="65" Column="43" />
+      <File FileName="Assets/Scripts/rotate_self.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
